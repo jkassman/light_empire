@@ -1,0 +1,4 @@
+S3_BUCKET: light-empire
+LightEmpire.html #HOMEPAGE
+light_empire.js
+favicon.ico

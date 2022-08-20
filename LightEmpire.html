@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <title> Constraints </title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+
+<style>
+#mainCanvas {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: lightgrey;
+}
+#mainCanvas2 {
+  left: 0%;
+  top: 4%;
+  width: 100%;
+  height: 100%;
+  background-color: lightgrey;
+  z-index: 1;
+  position: absolute;
+}
+
+/* God I hate HTML. You cannot set "size" where type="number" because HTML/CSS is actively evil */
+input[type=number]{
+    width: 7em;
+}
+input[type=text]{
+    width: 7em;
+}
+span {
+  font-family: monospace, "Lucida Console", Courier;
+  font-size: 82%
+}
+</style>
+
+</head>
+
+<body>
+    <input type="checkbox" id="lock_angles_tf" checked
+             oninput="update_from_html()">
+    <span>lock_angles_to: </span>
+    <input type="number" id="lock_angle_degrees" value=30
+       oninput="update_from_html()">
+    <input type="checkbox" id="lock_length_tf" unchecked
+             oninput="update_from_html()">
+    <span>lock_length_to: </span>
+    <input type="number" id="lock_length_units" value=0.0625
+       oninput="update_from_html()">
+  <input type="file" id="svg_file" name="Load SVG" accept="image/svg"
+        oninput="load_from_svg(event)">
+</body>
+<canvas id=mainCanvas2></canvas>
+<!--
+<script src="https://pomax.github.io/bezierjs/bezier.js" type="text/javascript"></script>
+-->
+<!--
+<script src="https://github.com/Pomax/bezierjs/blob/master/src/bezier.js" type="text/javascript"></script>
+<script src="https://microsoft.github.io/maker.js/target/js/browser.maker.js" type="text/javascript"></script>
+<script src="https://danmarshall.github.io/svg-path-outline/browser/index.js" type="text/javascript"></script>
+-->
+<!--<svg id="new_svg"> </svg> -->
+<script src=light_empire.js></script>
+
+
